@@ -74,7 +74,7 @@ public class XmlParsingForRelevantDocs {
 		}
 		
 		output.close();
-		
+		reader.close();
 		File file = new File("intermedFile");
 		file.delete();
 		
