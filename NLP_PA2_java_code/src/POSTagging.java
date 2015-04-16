@@ -9,7 +9,7 @@ public class POSTagging {
 
  // Initialize the tagger
  MaxentTagger tagger = new MaxentTagger(
-         "tagger/english-left3words-distsim.tagger");
+         "english-left3words-distsim.tagger");
 
  // The sample string
  String sample = "Helicopters will patrol the temporary no-fly zone around New Jersey's MetLife Stadium Sunday, with F-16s based in Atlantic City ready to be scrambled if an unauthorized aircraft does enter the restricted airspace."
