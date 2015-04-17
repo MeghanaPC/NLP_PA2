@@ -54,8 +54,6 @@ public class XmlParsingForRelevantDocs {
 		tagList.add("CAPTION");
 		tagList.add("GRAPHIC");
 
-
-
 		while ((input = reader.readLine()) != null) {
 
 			if (input.contains(("Qid"))) {
@@ -106,14 +104,43 @@ public class XmlParsingForRelevantDocs {
 
 		output.close();
 		reader.close();
-		/*
-		 * File file = new File("intermedFile"); file.delete();
-		 */
+		
+		 File file = new File("intermedFile"); file.delete();
+		 
 
 	}
 
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args){
 
-		xmlParse("top_docs.0", "resultFileName");
+		String pathToTopDocsDevDir = "/home/meghana/Documents/NLP_PA2/pa2_data/pa2-release/topdocs/dev";
+		String pathToTopDocsTestDir = "/home/meghana/Documents/NLP_PA2/pa2_data/pa2-release/topdocs/test";
+		
+		File dev_parsed_dir = new File(pathToTopDocsDevDir + "_parsed/");
+		dev_parsed_dir.mkdir();
+		File test_parsed_dir = new File(pathToTopDocsTestDir + "_parsed/");
+		test_parsed_dir.mkdir();
+
+		File[] files = new File(pathToTopDocsDevDir + "/").listFiles();
+		
+		for(File file : files){
+			try{
+				xmlParse(file.getAbsolutePath(), pathToTopDocsDevDir + "_parsed/"
+						+ file.getName());
+				}catch(Exception e){
+					e.printStackTrace();
+				}
+			
+		}
+		files = new File(pathToTopDocsTestDir + "/").listFiles();
+		
+		for(File file : files){
+			try{
+				xmlParse(file.getAbsolutePath(), pathToTopDocsTestDir + "_parsed/"
+						+ file.getName());
+				}catch(Exception e){
+					e.printStackTrace();
+				}
+			
+		}
 	}
 }
