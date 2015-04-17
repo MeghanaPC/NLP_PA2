@@ -6,8 +6,8 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map.Entry;
 import java.util.Properties;
+import java.util.Map.Entry;
 
 import com.google.common.collect.ArrayListMultimap;
 import com.google.common.collect.Multimap;
@@ -23,37 +23,92 @@ import edu.stanford.nlp.tagger.maxent.MaxentTagger;
 import edu.stanford.nlp.util.CoreMap;
 
 
-public class nerPOSCombined {
-	public static ArrayList<gramResult> gramResultList=new ArrayList<gramResult>();
-	public static final int docsToRead=200;
+public class MainClass {
 	
-	public static void Main(String[] args) throws IOException
-	{	 
+	public static final int linesToRead=200;
+	public static MaxentTagger tagger;
+	public static StanfordCoreNLP pipeline;
+	
+	public static void main(String[] args) throws IOException
+	{
+		/* ---------- loading pos tagger and ner ----- */
 		 Properties props = new Properties();
 	     boolean useRegexner = true;
 	     if (useRegexner) {
 	       props.put("annotators", "tokenize, ssplit, pos, lemma, ner, regexner");
-	      // props.put("regexner.mapping", "locations.txt");
 	     } else {
 	       props.put("annotators", "tokenize, ssplit, pos, lemma, ner");
 	     }
-	     StanfordCoreNLP pipeline = new StanfordCoreNLP(props);
-	     //POS tagger
-	     MaxentTagger tagger = new MaxentTagger(
-	             "english-left3words-distsim.tagger");
+	     pipeline = new StanfordCoreNLP(props);
+	    
+	     tagger = new MaxentTagger("english-left3words-distsim.tagger");
 	     
-	     Path filepath = Paths.get("-----filepath-----");
-	     BufferedReader reader = new BufferedReader(new FileReader(filepath.toString()));
+		/* -------main flow starts here ------------ */
+		 Path filepath = Paths.get("/home/trupti/Desktop/pa2-release/qadata/dev/questions.txt");
+	     BufferedReader quereader = new BufferedReader(new FileReader(filepath.toString()));
 	     String line = null;
+	     boolean flag=false;
+	     String qno=null;
+	     while ((line = quereader.readLine()) != null)
+	     {
+	    	
+	    	 String question=null;
+	    	 if(flag)
+	    	 {
+	    		 question=line;
+	    		 System.out.println(question);
+	    		 flag=false;
+	    	 }
+	    	
+	    	 if(line.contains("Number"))
+	    	 {
+	    		 flag=true;
+	    		 String[] temp=line.split(" ");
+	    		 qno=temp[1];
+	    		 System.out.println(qno);
+	    		 
+	    	 }
+	    	 if(question!=null)
+	    	 {
+	    		 ArrayList<gramResult> resultList=new ArrayList<gramResult>();
+	    		 resultList=processQuestions(qno);
+	    		 
+	    		 for(gramResult g:resultList)
+	 	 		{
+	 	 			Multimap<String, String> m=g.nerTagMap;
+	 	 			ArrayList<String> a=g.nounPhraseList;
+	 	 			System.out.println("---------------------------------new line-------------------------------------");
+	 	 			for(Entry<String, String> entry:m.entries())
+	 	 			{
+	 	 				System.out.println(entry.getKey()+" - "+entry.getValue());
+	 	 			}
+	 	 			for(String nounp:a)
+	 	 			{
+	 	 				System.out.println(nounp);
+	 	 			}
+	 	 		}
+	    	 }
+	    	 // answer processing
+	    	 
+	    	
+	     }
+	     quereader.close();
+	}
+	public static ArrayList<gramResult> processQuestions(String qno) throws IOException
+	{
+		 ArrayList<gramResult> gramResultList=new ArrayList<gramResult>();
+		 Path filepath = Paths.get("Ngram_"+qno);
+	     BufferedReader reader = new BufferedReader(new FileReader(filepath.toString()));
+	     String line1 = null;
 	     int numberLines=0;
-		while ((line = reader.readLine()) != null&&numberLines<=docsToRead)
-		{
+		 while ((line1 = reader.readLine()) != null&&numberLines<=linesToRead)
+		 {
 			numberLines=numberLines+1;
 			Multimap<String, String> myMultimap = ArrayListMultimap.create();
-			 ArrayList<String> myPhraseList = new ArrayList<String>();
+			ArrayList<String> myPhraseList = new ArrayList<String>();
 			 
-				Annotation document = new Annotation(line);
-		       pipeline.annotate(document);
+				Annotation document = new Annotation(line1);
+		        pipeline.annotate(document);
 
 		       List<CoreMap> sentences = document.get(SentencesAnnotation.class);
 		       StringBuilder sb = new StringBuilder();
@@ -100,7 +155,7 @@ public class nerPOSCombined {
 		         }
 		       }
 		       /* -------POS -------*/
-		       String tagged = tagger.tagString(line);
+		       String tagged = tagger.tagString(line1);
 		       boolean found=false;
 		       String[] wordsTags=tagged.split(" ");
 		       StringBuilder sbPhrase=new StringBuilder();
@@ -129,20 +184,7 @@ public class nerPOSCombined {
 		} //while each sentence
 		reader.close();
 		
-		for(gramResult g:gramResultList)
-		{
-			Multimap<String, String> m=g.nerTagMap;
-			ArrayList<String> a=g.nounPhraseList;
-			System.out.println("---------------------------------new line-------------------------------------");
-			for(Entry<String, String> entry:m.entries())
-			{
-				System.out.println(entry.getKey()+" - "+entry.getValue());
-			}
-			for(String nounp:a)
-			{
-				System.out.println(nounp);
-			}
-		}
+		return gramResultList;
 		
-	}//main
-}//class
+	}
+}
