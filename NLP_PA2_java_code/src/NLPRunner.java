@@ -27,11 +27,11 @@ public class NLPRunner {
 	     }
 	     StanfordCoreNLP pipeline = new StanfordCoreNLP(props);
 
-	    String[] tests =
+	  /*  String[] tests =
 	         {
 	             "Partial invoice (€100,000, so roughly 40%) for the consignment C27655 we shipped on 15th August to London from the Make Believe Town depot. INV2345 is for the balance.. Customer contact (Sigourney) says they will pay this on the usual credit terms (30 days)."
-	         };
-	    // String[] tests ={"then HOCKEY PLAYERS LOS ANGELES KINGS HOCKEY TEAM GRETZKY WAYNE"};
+	         }; */
+	    String[] tests ={"HOCKEY PLAYERS LOS ANGELES KINGS HOCKEY TEAM GRETZKY WAYNE"};
 
 	     for (String s : tests) {
 
