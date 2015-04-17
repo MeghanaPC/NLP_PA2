@@ -11,7 +11,7 @@ import edu.stanford.nlp.ling.CoreAnnotations.TokensAnnotation;
 import edu.stanford.nlp.pipeline.Annotation;
 import edu.stanford.nlp.pipeline.StanfordCoreNLP;
 import edu.stanford.nlp.util.CoreMap;
-public class NLPRunner {
+public class NerTagging {
 	
 	   public static void main(String[] args) {
 	    
