@@ -6,18 +6,21 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 from nltk.util import ngrams
 from nltk.corpus import stopwords
+from collections import OrderedDict
 
 stopword_list = stopwords.words("english");
 
-fileHandle = open('resultFileName.orig', 'r')
+fileHandle = open('result1', 'r')
 inputString = fileHandle.read()
 input_words = inputString.split();
+"""
 stoppedInput = str();
 for words in input_words:
 	if words not in stopword_list:
 		stoppedInput += words+" "
 no_punctuation = stoppedInput.translate(None, string.punctuation)
-
+"""
+no_punctuation = inputString.translate(None, string.punctuation)
 
 str_Array = {}
 
@@ -44,6 +47,7 @@ str_Array[0] = result
 n = 10
 ngramsArray = ngrams(no_punctuation.split(), n)
 
+ngramsArray = OrderedDict.fromkeys(ngramsArray)
 arr = []
 k = 1
 stopword_list = stopwords.words("english");
@@ -67,6 +71,7 @@ for x in range (0, l):
 sorted_x = sorted(finalMap.items(), key=operator.itemgetter(1), reverse=True)
 #print sorted_x
 
-for i in range (0, 40):
+for i in range (1, 40):
 	j = sorted_x[i][0]
+	print('')
 	print str_Array[j]
