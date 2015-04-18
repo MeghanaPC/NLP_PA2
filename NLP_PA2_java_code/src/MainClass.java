@@ -1,13 +1,17 @@
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 import java.util.Properties;
 import java.util.Map.Entry;
+import java.util.regex.Pattern;
 
 import com.google.common.collect.ArrayListMultimap;
 import com.google.common.collect.Multimap;
@@ -29,6 +33,10 @@ public class MainClass {
 	public static MaxentTagger tagger;
 	public static StanfordCoreNLP pipeline;
 	
+	private static final int numberAnswers=10;
+	private static final int countNER=7;
+	//private static final int countPhrase=0;     numberAnswers-countNER
+	
 	public static void main(String[] args) throws IOException
 	{
 		/* ---------- loading pos tagger and ner ----- */
@@ -44,6 +52,11 @@ public class MainClass {
 	     tagger = new MaxentTagger("english-left3words-distsim.tagger");
 	     
 		/* -------main flow starts here ------------ */
+	     Path resultFilePath = Paths.get("Answers.txt");
+	     BufferedWriter writer=new BufferedWriter(new FileWriter(resultFilePath.toString()));
+	     
+	     
+	     
 		 Path filepath = Paths.get("/home/trupti/Desktop/pa2-release/qadata/dev/questions.txt");
 	     BufferedReader quereader = new BufferedReader(new FileReader(filepath.toString()));
 	     String line = null;
@@ -65,15 +78,116 @@ public class MainClass {
 	    		 flag=true;
 	    		 String[] temp=line.split(" ");
 	    		 qno=temp[1];
-	    		 System.out.println(qno);
+	    		System.out.println(qno);
 	    		 
 	    	 }
 	    	 if(question!=null)
 	    	 {
+	    		 ArrayList<String> finalAnswerList=new ArrayList<String>();  //need to be instantiated only once
 	    		 ArrayList<gramResult> resultList=new ArrayList<gramResult>();
 	    		 resultList=processQuestions(qno);
 	    		 
-	    		 for(gramResult g:resultList)
+	    		 String answerType=Answertype.findAnswerType(question);
+	    		 
+	    		 	if(Pattern.compile("(DATE|LOCATION|PERSON|TIME|ORGANIZATION|TIME|MONEY)",Pattern.CASE_INSENSITIVE).matcher(answerType).find())
+	    			{
+	    		 		//taking 7 NERS and 3 phrases. Else if no NERS found, then rest of them noun phrases.
+	    		 		//int countAns=0;
+	    				boolean doneNER=false;
+	    				for(gramResult rl:resultList)
+	    				{
+	    					Multimap<String, String> map=ArrayListMultimap.create(rl.nerTagMap);	
+	    	 	 			
+	    	 	 		
+	    	 	 			Collection<String> taggerWords=map.get(answerType);
+	    	 	 			for(String s:taggerWords)
+	    	 	 			{
+	    	 	 				if(finalAnswerList.size()>=countNER)
+	    	 	 				{
+	    	 	 					doneNER=true;
+	    	 	 					break;
+	    	 	 				}
+	    	 	 				String filtered = filterAnswer(s, question);
+	    	 	 				if(filtered != null && !(finalAnswerList.contains(s))){
+	    	 	 					finalAnswerList.add(s);
+	    	 	 				}
+	    	 	 			}
+
+	    				}
+	    				int remaining=numberAnswers-finalAnswerList.size();
+	    				for(gramResult rl:resultList)
+	    				{
+	    					ArrayList<String> arr=new ArrayList<String>(rl.nounPhraseList);
+	    					for(String phrase:arr)
+	    					{
+	    						if(remaining>0)
+	    						{
+	    							String filtered = filterAnswer(phrase, question);
+		    	 	 				if(filtered != null && !(finalAnswerList.contains(phrase))){
+		    	 	 					finalAnswerList.add(phrase);
+		    	 	 					--remaining;
+		    	 	 				}
+	    							
+	    						}
+	    						else
+	    							break;
+	    					}
+	    				}
+	    				
+	    		 		System.out.println("ner tag found");
+	    			}
+	    			else if(Pattern.compile("(NOUNPHRASE)",Pattern.CASE_INSENSITIVE).matcher(answerType).find())
+	    			{
+	    				//just taking top 10 noun phrases for now 
+	    				System.out.println("noun phrase found");
+	    				int countAns=0;
+	    				boolean doneFlag=false;
+	    				for(gramResult rl:resultList)
+	    				{
+	    					ArrayList<String> arr=new ArrayList<String>(rl.nounPhraseList);
+	    					for(String nounp:arr)
+	    	 	 			{
+	    						
+	    						String filtered = filterAnswer(nounp, question);
+	    	 	 				if(filtered != null && !(finalAnswerList.contains(nounp))){
+	    	 	 					countAns=countAns+1;
+	    	 	 					finalAnswerList.add(nounp);
+	    	 	 				}	    						
+	    	 	 				if(countAns>=numberAnswers)
+	    						{
+	    							doneFlag=true;
+	    							break;
+	    						}
+	    	 	 			}
+	    					if(doneFlag)
+    							break;	
+	    				}
+	    					
+	    			}
+	    			else if(Pattern.compile("(NUMBER)",Pattern.CASE_INSENSITIVE).matcher(answerType).find())
+	    			{
+	    				//might need to keep list of POS tags for date.
+	    				 System.out.println("number found");
+	    			}
+	    			else
+	    			{
+	    				System.out.println("none of the question types match...error");
+	    			}
+	    		 
+	    		 	writer.write("qid"+" "+qno);
+	    		 	writer.newLine();
+	    		 	for(int i=0;i<finalAnswerList.size();i++)
+	    		 	{
+	    		 		if(i >= numberAnswers){
+	    		 			break;
+	    		 		}
+	    		 		writer.write(i+1+" "+finalAnswerList.get(i));
+	    		 		writer.newLine();
+	    		 		
+	    		 	}
+
+	    		 
+	    	/*	 for(gramResult g:resultList)
 	 	 		{
 	 	 			Multimap<String, String> m=g.nerTagMap;
 	 	 			ArrayList<String> a=g.nounPhraseList;
@@ -86,18 +200,39 @@ public class MainClass {
 	 	 			{
 	 	 				System.out.println(nounp);
 	 	 			}
-	 	 		}
+	 	 		}*/
 	    	 }
 	    	 // answer processing
 	    	 
 	    	
 	     }
 	     quereader.close();
+	     writer.close();
+	}
+	private static String filterAnswer(String s, String question) {
+		
+		String result = "";
+		Boolean found = false;
+		
+		//for each word in the answer which is not present in the question, add it to result
+		String[] answerWords = s.split(" ");
+		for(String answerWord : answerWords){
+			if(!question.toLowerCase().contains(answerWord.toLowerCase())){
+				found = true;
+				result = result + answerWord;
+			}
+		}
+		if(found){
+			return result;			
+		}else{
+			return null;
+		}
 	}
 	public static ArrayList<gramResult> processQuestions(String qno) throws IOException
 	{
+		 System.out.println(qno+"in the process method");
 		 ArrayList<gramResult> gramResultList=new ArrayList<gramResult>();
-		 Path filepath = Paths.get("Ngram_"+qno);
+		 Path filepath = Paths.get("dev_ngrams/Ngrams_"+qno);
 	     BufferedReader reader = new BufferedReader(new FileReader(filepath.toString()));
 	     String line1 = null;
 	     int numberLines=0;

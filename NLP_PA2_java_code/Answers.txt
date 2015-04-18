@@ -1,0 +1,1025 @@
+qid 0
+1 thats
+2 anything
+3 Gretzky didnt play
+4 Howe
+5 trade Wayne Gretzky
+6 room
+7 Kings
+8 Gretzkys
+9 line
+10 Edmonton Oilers
+qid 1
+1 flower paintings
+2 bit
+3 irises
+4 painting
+5 Vincent van Gogh portrait
+6 March
+7 Night
+8 Popularity
+9 show
+10 Vincent van Gogh Museum
+qid 2
+1 ANISE STARS
+2 shortbread
+3 center
+4 flour
+5 fill
+6 licorice
+7 Form
+8 anise swallowtail
+9 DO
+10 vanilla beans
+qid 3
+1 market
+2 president
+3 lady
+4 banners
+5 hit Christmas tune
+6 Christmas tune
+7 holiday plants
+8 poinsettia
+9 candle
+10 grasp
+qid 5
+1 jump
+2 points
+3 Syracuse
+4 host
+5 lips
+6 game
+7 season
+8 Badgers STANFORD
+9 Jackson
+10 anybody
+qid 7
+1 sausage
+2 herb potatoes
+3 selections
+4 bread
+5 potatoes
+6 NEWSBITES CAPISTRANO MEET CHINOISIA Chinoisia
+7 debut
+8 CAPISTRANO MEET CHINOISIA Chinoisia
+9 week
+10 CHINOISIA Chinoisia
+qid 8
+1 curies radiation
+2 materials
+3 tritium
+4 carbon14
+5 material 50m curies
+6 iodine
+7 radiation
+8 amount
+9 study
+10 release
+qid 9
+1 scholars
+2 God
+3 arm
+4 Eve
+5 arms
+6 figures
+7 ceiling
+8 architecture decoration
+9 likeness
+10 part
+qid 10
+1 show
+2 men
+3 color treatment
+4 MARKET
+5 research
+6 bottoms
+7 face
+8 texture
+9 flexibility
+10 request decency
+qid 11
+1 lizards
+2 walls
+3 back
+4 rooms
+5 ceiling
+6 night geckos
+7 day
+8 babies
+9 types
+10 chickens
+qid 12
+1 Noriega
+2 Hoeveler
+3 Tom Johnson
+4 Steve Haworth
+5 public
+6 right
+7 Gannett
+8 Today
+9 Co Inc
+10 USA Today
+qid 13
+1 prices
+2 importance
+3 Garrard exhibition
+4 comparison
+5 regulations
+6 Bank
+7 addition
+8 time
+9 Mean Time
+10 banks
+qid 14
+1 experiment
+2 experiments
+3 way
+4 rabbits GUINEA PIGS
+5 TEST GUINEA PIGS
+6 animals
+7 rabbits
+8 tests
+9 PHOTO rabbits GUINEA PIGS
+10 Editor
+qid 15
+1 disorders
+2 system
+3 sicklecell anemia
+4 blood disorders
+5 breakthroughs
+6 Sicklecell anemia Beta thalassemia
+7 blood disorder thalassemia
+8 anemia
+9 TaySachs disease
+10 cancer
+qid 17
+qid 18
+1 Woodstock Festival
+2 Bethel
+3 California
+4 Berlin
+5 East Berlin
+6 Altamont
+7 York City
+8 anything
+9 girl
+10 years
+qid 19
+1 retrospective
+2 art
+3 works
+4 others
+5 week
+6 Jackson Pollocks Jackson Pollock
+7 artist
+8 Museum
+9 backtoback retrospective
+10 thought
+qid 20
+1 Gulfstream Park
+2 California
+3 Lexington
+4 Americas
+5 Ft Lauderdale Fla
+6 United Press International THE KENTUCKY
+7 Alysheba
+8 None
+9 McCarron cant
+10 McCarron
+qid 21
+1 years
+2 girl
+3 Kluge
+4 Christie Brinkley Richard Oelsner
+5 lawyer
+6 Billy Joel mother
+7 daughter
+8 Brinkley Cover girl
+9 respect
+10 role model Marx
+qid 22
+1 Pennsylvania
+2 decade
+3 Michigan Ohio
+4 seat
+5 Indiana Michigan
+6 House census
+7 population subcommittee
+8 states Illinois Michigan Ohio
+9 Illinois Michigan Ohio
+10 population losers
+qid 24
+1 Brazil
+2 Mississippi
+3 US
+4 Asia
+5 South America
+6 America
+7 South Americas
+8 May
+9 CRISIS Bolivia
+10 issue
+qid 26
+1 Cincinnati
+2 CINCINNATI
+3 Venezuela
+4 Neenah
+5 Europe
+6 US
+7 Atlanta
+8 company
+9 industry
+10 deal
+qid 28
+1 sun rays
+2 form
+3 types
+4 sun
+5 skin cancer Skin cancers
+6 ultravioletradiation exposure
+7 cell skin cancer
+8 forms
+9 exposure
+10 cancer Skin cancers
+qid 29
+1 5050
+2 1936
+3 1983
+4 1974
+5 water
+6 dams
+7 approval
+8 permit
+9 chance
+10 completion
+qid 30
+1 William Gibson
+2 Gibson
+3 Geof Wheelwright
+4 Drexler
+5 Ulysses
+6 Cohen
+7 Eric Drexler
+8 journey
+9 writer William Gibson
+10 SciFi writer William Gibson
+qid 31
+1 pool
+2 child
+3 fence
+4 technique
+5 ICU
+6 someone
+7 didnt
+8 Man
+9 film
+10 headline news
+qid 34
+1 napalm bombs
+2 chemical weapons
+3 south
+4 attacks
+5 use
+6 north
+7 people
+8 missiles napalm bombs
+9 chemical weapon
+10 Dow Chemical The chemical concern
+qid 35
+1 broadcast
+2 Ive
+3 anchorman
+4 comedy
+5 HBOs
+6 Night
+7 position
+8 performer
+9 comedy special
+10 Dom Irrera Bill Maher
+qid 36
+1 Gerassi
+2 Sartre
+3 Boswell
+4 James Boswell
+5 Samuel Goldwyn
+6 Scott Berg
+7 Samuel Johnsons Lives
+8 Life
+9 mine
+10 workingclass friend
+qid 37
+1 Bonniksen
+2 Linda Bonniksen
+3 Goeken
+4 California Murphy
+5 parts
+6 Baby Bell
+7 Bell
+8 Bell spokeswoman
+9 states
+10 company
+qid 39
+1 guitar
+2 years
+3 Fender Stratocaster
+4 father
+5 aesthetics
+6 Stratocaster The
+7 typewriter
+8 decades
+9 RollsRoyce
+10 rock guitarist
+qid 40
+1 Peter Butler
+2 John Henry
+3 Henry Stram
+4 Henry VIII
+5 A Politz
+6 Guthrie
+7 Henry E Hudson
+8 First Boston
+9 cast
+10 Mr Henry
+qid 41
+1 Sam the founder
+2 Sam Walton
+3 Chappelle
+4 Sam
+5 Walton
+6 Shinkle
+7 Don Shinkle
+8 WalMart
+9 WalMart Stores Inc
+10 name Sam
+qid 43
+1 Life
+2 song Miss Wilson
+3 girl
+4 Esther Smith
+5 Legs Diamond
+6 slide Esther Smith
+7 Ella Fitzgerald
+8 nominees
+9 woman
+10 Boy Next Door
+qid 45
+1 wife
+2 children
+3 ranch
+4 Actor Nicholas Cage
+5 hes
+6 quarters
+7 animals
+8 things
+9 Manhattan
+10 people
+qid 46
+1 Babylon
+2 Nebuchadnezzar
+3 gardens
+4 world adv31AGENCIES
+5 seas
+6 Zeus
+7 Firefighters
+8 city
+9 world A panel
+10 Gardens
+qid 47
+1 things Pittsburgh
+2 shape
+3 care
+4 Miami
+5 baseball teams
+6 league baseball team
+7 Pittsburgh Pirates
+8 Oakland
+9 profits
+10 record
+qid 48
+1 Parkinsons disease Sales
+2 Du Pont
+3 market Sinemet
+4 Parkinsons disease
+5 Pont
+6 Vaseretic
+7 treatment Sinemet antiParkinsons treatment Technology
+8 prostate treatment Sinemet antiParkinsons treatment Technology
+9 rights
+10 drug Proscar
+qid 49
+1 US
+2 Canada
+3 America
+4 Chicago
+5 side
+6 masks
+7 manifestations
+8 witches
+9 priest
+10 religion
+qid 50
+1 Miami
+2 West Virginia University
+3 Mountaineer mascot
+4 embodiment
+5 Im
+6 male
+7 buckskinclad Mountaineer mascot
+8 events
+9 Notre Dame package
+10 Tree
+qid 51
+1 band
+2 career
+3 death
+4 Photo PHOTO Bob Marley Celebration MARLEY CELEBRATIONS
+5 Bob Marley Celebration MARLEY CELEBRATIONS
+6 Bob Marley Celebration
+7 BOB MARLEY BUT ZIGGY
+8 things People
+9 PHOTO Bob Marley Celebration MARLEY CELEBRATIONS
+10 People
+qid 52
+1 Mark Crispin
+2 Crispin
+3 Egg Stoll
+4 Berlin Rebmann
+5 Rebmann
+6 Stoll
+7 DiCicco
+8 Espionage Charges
+9 Blow
+10 Soviets
+qid 53
+1 Lunden
+2 Sullivan
+3 Kathleen
+4 Hartman
+5 Scott
+6 Joan Lunden
+7 York
+8 cohost
+9 ABCs
+10 CBS show
+qid 54
+1 side
+2 Hebrew
+3 language
+4 deal
+5 basics
+6 UCLA
+7 Jewish Community Center
+8 Long Beach
+9 way
+10 race
+qid 55
+1 snow
+2 shore
+3 part
+4 case
+5 weekend
+6 homes
+7 counties
+8 Poconos Id
+9 Caesars World
+10 house
+qid 56
+1 PHOTO Kathie Lee Gifford KATHIE LEE GIFFORD
+2 Regis Philbin KATHIE LEE GIFFORD
+3 Philbin PHOTO Kathie Lee Gifford KATHIE LEE GIFFORD
+4 Kathie Lee Frank
+5 Regis Philbin PHOTO Kathie Lee Gifford KATHIE LEE GIFFORD
+6 PHOTO Kathie Lee Gifford
+7 Kathie Lee talk show
+8 Kathie Lee Gifford REGIS KATHIE LEE
+9 MISS AMERICA
+10 Philbin PHOTO Kathie Lee Gifford REGIS KATHIE LEE
+qid 57
+1 Siberia
+2 Russian Federation
+3 Australia
+4 New York
+5 Yakutia
+6 Antwerp Belgium
+7 Belgium
+8 cent
+9 production
+10 development
+qid 58
+1 television
+2 radio
+3 magazines
+4 plans
+5 year
+6 Martha Stewart The magazine
+7 guides
+8 author Martha Stewart
+9 homeentertainment guides
+10 book author Martha Stewart
+qid 62
+1 Henson
+2 Jim Henson Henson
+3 Okun
+4 Henson Henson
+5 Ponce D Lion
+6 Henson Ponce D Lion
+7 Jim Henson
+8 series
+9 Lion
+10 host
+qid 63
+1 Irvine HAZMAT
+2 Irvine Hazmat
+3 Orange County Hazardous Materials Team
+4 station
+5 incidents
+6 chemical industry
+7 state
+8 Huntington Beach
+9 county station
+10 County Hazardous Materials Team
+qid 65
+qid 66
+1 tourist attraction Host
+2 Great Pyramid
+3 Egypts
+4 tourist officials
+5 town
+6 tourist attractions
+7 Pyramid
+8 middle
+9 appearance
+10 Hollywood tourist attraction
+qid 68
+1 Kelloggs cereal characters
+2 lot
+3 General
+4 Attorney General
+5 hope
+6 creator
+7 adults SUMMER
+8 summer pop schedule
+9 Crackle Pop characters
+10 sound
+qid 69
+1 Mohr
+2 Josef Mohr
+3 Josef Haydns
+4 Franz Josef Haydns
+5 Haydn Franz Josef Haydns
+6 Michael Haydn Franz Josef Haydns
+7 Marie
+8 descant
+9 Christmas song
+10 biggie
+qid 70
+1 Sunday
+2 1939
+3 1984
+4 March 15 1939
+5 1945
+6 leader Adolf Hitler
+7 newspaper
+8 violence
+9 clarity
+10 Germany
+qid 72
+1 Bill
+2 Darth Vader You
+3 Michael Jackson
+4 Jones
+5 George
+6 George Lucas
+7 Earl Jones
+8 Wish
+9 Junior
+10 Hook
+qid 73
+1 Matlock
+2 Matlock Jake
+3 Wiseguy
+4 Kate Allie
+5 Allie
+6 Perry Mason
+7 Cagney Lacey
+8 box Jake
+9 television FATMAN REDUX Jake The Fatman
+10 season box Jake
+qid 74
+1 Manhattan
+2 New York
+3 editor
+4 news position Ms Amsterdam
+5 Jane Amsterdam
+6 New York Post
+7 Senior Job Jane Amsterdam
+8 magazine
+9 York Post
+10 Post
+qid 75
+1 Civil War battles
+2 shopping mall
+3 center
+4 Virginia
+5 War battlefield A bill
+6 shopping center
+7 National Battlefield Park
+8 site
+9 National Battlefield site
+10 1862 Civil War battle
+qid 76
+1 fire
+2 land
+3 acres
+4 foot
+5 Rushmore
+6 National Memorial
+7 Black Hills area
+8 Wyoming
+9 sunshine
+10 nation
+qid 77
+1 1975
+2 1970s
+3 move Hasbro Inc maker
+4 doll
+5 Italy
+6 US
+7 Barbies
+8 Year Barbie
+9 playmates
+10 version
+qid 78
+1 people
+2 storm
+3 freak storm
+4 coast
+5 rains
+6 houses
+7 year
+8 summer monsoons Floods
+9 island
+10 states
+qid 79
+1 Linda
+2 Postal Service
+3 US Postal Service
+4 officials
+5 AMORTIZATION MASTER A friend
+6 numbers
+7 post office
+8 mail
+9 zip code Im
+10 youll
+qid 80
+1 music
+2 forces
+3 British
+4 countrys
+5 oils Cairns finances
+6 form
+7 love
+8 finances
+9 People
+10 language Lallans
+qid 81
+1 Charles Burnett
+2 Wayne Malick
+3 Brian De Palma Sisters
+4 Hays
+5 Terrence Malick Sydney Pollack
+6 Mario Puzo Ziegler
+7 Towne Richard Donner Philip Kaufman Terrence Malick Sydney Pollack
+8 way Terrence Malick
+9 Terrence Malick Badlands
+10 year
+qid 82
+1 road
+2 Myrtle Beach SC
+3 North Myrtle Beach SC
+4 Myrtle Beach Dowling
+5 Lagoon miniature golf course
+6 Treasures
+7 North Myrtle Beach
+8 South
+9 time
+10 tennis courts
+qid 83
+1 1770
+2 1934
+3 summer
+4 part
+5 house
+6 artifacts Beethoven
+7 Bonn
+8 Kohl
+9 piano
+10 Mrs Kohl
+qid 84
+1 tale
+2 Man Tate movie
+3 hit
+4 Tate movie
+5 part
+6 film
+7 screens
+8 place
+9 charts
+10 role
+qid 86
+1 sweetener aspartame NutraSweets US patent
+2 market aspartame
+3 United States Aspartame
+4 lowcalorie sweetener aspartame NutraSweets US patent
+5 US patent
+6 aspartame NutraSweets US patent
+7 product
+8 producer
+9 US aspartame market
+10 years
+qid 87
+1 New York
+2 Pennsylvania
+3 York
+4 Niagara Falls All
+5 Hungary
+6 Miami
+7 Poland
+8 side
+9 weeks
+10 Bath
+qid 88
+1 Brazil
+2 Uruguay Argentina Chile
+3 Americas
+4 Argentina Chile
+5 Chile
+6 South America
+7 America
+8 Venezuela Bushs Enterprise
+9 Americas initiative
+10 visit Uruguay Argentina Chile
+qid 89
+1 person
+2 Martika
+3 kind
+4 attitude
+5 places
+6 Id
+7 music
+8 excitement
+9 show
+10 MADONNA ITS A
+qid 90
+1 pop
+2 candles
+3 birthday cake
+4 wife Kari
+5 name
+6 blow
+7 Dick Clark Productions Inc DICK CLARK PRODUCTIONS INC
+8 couple
+9 businesses
+10 DICK CLARK Music television veteran Dick Clark
+qid 91
+1 flag
+2 Japanesemade motorcycle
+3 Dello
+4 anyone
+5 Honda
+6 American RD research
+7 Zien
+8 American Honda
+9 development
+10 Honda Motor Co
+qid 92
+1 Whos
+2 Boss Tony Danza
+3 spinoff
+4 show
+5 house A
+6 Alyssa Milano Samantha
+7 Boss
+8 character
+9 fan
+10 people Samantha Alyssa Milano
+qid 93
+1 world
+2 Ito
+3 Midori Ito
+4 time
+5 Japans Midori Ito
+6 everyone
+7 FREMONT FIGURE SKATER
+8 womens
+9 freestyle figure skater
+10 line
+qid 94
+1 money
+2 US
+3 nations
+4 rarity
+5 Merck
+6 Cough Chicken Pox A vaccine
+7 year
+8 approval
+9 chicken pox vaccine Mr Vagelos
+10 Id
+qid 95
+1 US
+2 story
+3 success
+4 Lion King None
+5 film business
+6 Disney
+7 Lion King Disney
+8 year
+9 summer release
+10 film
+qid 99
+1 1987
+2 1978
+3 players
+4 sport
+5 NFL star
+6 sales
+7 Rice
+8 drug policy
+9 contracts
+10 league
+qid 100
+1 Topanga GOODALL
+2 Shes
+3 Einstein
+4 Dian Fossey
+5 Grey Owl
+6 Photo Jane Goodall
+7 chimpanzee JANE GOODALL Goodall
+8 The International Tribute
+9 behaviorist Jane Goodall
+10 show
+qid 101
+1 Woodrow Wilson School
+2 Princeton University
+3 economics
+4 Rochester
+5 graduate
+6 president BROTHER WOODROW A MEMOIR
+7 country
+8 vision
+9 Princeton University Woodrow Wilson School
+10 Public
+qid 102
+1 season opener
+2 Alberta Province
+3 years
+4 debate
+5 Olympic Saddledome crowd
+6 opener
+7 teams Legislators
+8 legends
+9 investigation
+10 government loans
+qid 103
+1 ads
+2 Jakes
+3 teaspoons
+4 canisters
+5 syrup
+6 sugar
+7 drink companies
+8 machine
+9 kind
+10 time
+qid 104
+1 Wednesday
+2 Jan 15
+3 June
+4 Wednesdays
+5 September
+6 part
+7 Virginia
+8 games
+9 year
+10 secret
+qid 105
+1 walnuts pomegranates
+2 stock
+3 sauce
+4 items
+5 pulp
+6 Garnish Seeds
+7 cup
+8 parsley
+9 Seeds
+10 pomegranate juice
+qid 106
+1 William
+2 Charles Windsor
+3 Malla
+4 ears
+5 Queen
+6 candidate
+7 throne
+8 collection
+9 association
+10 Crown
+qid 108
+1 Bonney
+2 Garrett
+3 Pat Garrett
+4 McCarty
+5 Bonney Jr
+6 Henry McCarty
+7 Brushy Bill
+8 death
+9 alias Billy
+10 Sheriff Pat Garrett
+qid 109
+1 Brian Wilson
+2 Gary Usher
+3 Marie
+4 Astaire
+5 Garrett
+6 Hochman
+7 Dozier
+8 OUT FROM
+9 THEIR ROCK Summer
+10 hit
+qid 111
+1 Kirk
+2 David Kirk
+3 Rob Andrew
+4 Welsh
+5 Zealand
+6 Australia
+7 New Zealand
+8 England
+9 finish
+10 World Cup weights
+qid 112
+1 1976
+2 Thoreson
+3 Ms DiLorenzo
+4 life
+5 Guccione
+6 Year Guccione
+7 terms
+8 townhouse
+9 step
+10 something
+qid 113
+1 Grapes
+2 Wrath
+3 adaptation
+4 Nunnally Johnson
+5 Joads Steinbeck
+6 precursor
+7 California
+8 John Ford
+9 Pulitzer Prizewinning
+10 Frank Galati
+qid 114
+1 Seuss
+2 Rudolph
+3 Horton Hears
+4 Seuss Horton Hears
+5 Claus Rudolph
+6 Bush
+7 Turtle
+8 childrens book
+9 part
+10 Tree
+qid 115
+1 Madame doll
+2 Revolution
+3 part
+4 business
+5 Girls Collection
+6 dolls
+7 fashions
+8 clothes
+9 history
+10 Model Collection
+qid 116
+1 1951
+2 1948
+3 May 16
+4 technology
+5 company
+6 goods
+7 overnightexpress business
+8 years
+9 apparatus
+10 addresses
+qid 117
+1 airports
+2 way
+3 John Wayne Airport
+4 downtown Los Angeles
+5 Wayne Airport
+6 Wayne
+7 extension
+8 International Air Leases
+9 controller
+10 man

@@ -35,7 +35,7 @@ public class Answertype {
 		
 		
 		
-		return "no match";
+		return "NOUNPHRASE";   //removed no match --trupti
 	}
 	
 	public static void main(String[] args){
