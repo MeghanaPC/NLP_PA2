@@ -29,7 +29,7 @@ import edu.stanford.nlp.util.CoreMap;
 
 public class MainClass {
 	
-	public static final int linesToRead=200;
+	public static final int linesToRead=1900;
 	public static MaxentTagger tagger;
 	public static StanfordCoreNLP pipeline;
 	
@@ -57,7 +57,7 @@ public class MainClass {
 	     
 	     
 	     
-		 Path filepath = Paths.get("/home/trupti/Desktop/pa2-release/qadata/dev/questions.txt");
+		 Path filepath = Paths.get("/home/meghana/Documents/NLP_PA2/pa2_data/pa2-release/qadata/dev/questions.txt");
 	     BufferedReader quereader = new BufferedReader(new FileReader(filepath.toString()));
 	     String line = null;
 	     boolean flag=false;
@@ -108,8 +108,8 @@ public class MainClass {
 	    	 	 					break;
 	    	 	 				}
 	    	 	 				String filtered = filterAnswer(s, question);
-	    	 	 				if(filtered != null && !(finalAnswerList.contains(s))){
-	    	 	 					finalAnswerList.add(s);
+	    	 	 				if(filtered != null && !(finalAnswerList.contains(filtered))){
+	    	 	 					finalAnswerList.add(filtered);
 	    	 	 				}
 	    	 	 			}
 
@@ -123,8 +123,8 @@ public class MainClass {
 	    						if(remaining>0)
 	    						{
 	    							String filtered = filterAnswer(phrase, question);
-		    	 	 				if(filtered != null && !(finalAnswerList.contains(phrase))){
-		    	 	 					finalAnswerList.add(phrase);
+		    	 	 				if(filtered != null && !(finalAnswerList.contains(filtered))){
+		    	 	 					finalAnswerList.add(filtered);
 		    	 	 					--remaining;
 		    	 	 				}
 	    							
@@ -149,9 +149,9 @@ public class MainClass {
 	    	 	 			{
 	    						
 	    						String filtered = filterAnswer(nounp, question);
-	    	 	 				if(filtered != null && !(finalAnswerList.contains(nounp))){
+	    	 	 				if(filtered != null && !(finalAnswerList.contains(filtered))){
 	    	 	 					countAns=countAns+1;
-	    	 	 					finalAnswerList.add(nounp);
+	    	 	 					finalAnswerList.add(filtered);
 	    	 	 				}	    						
 	    	 	 				if(countAns>=numberAnswers)
 	    						{
@@ -219,11 +219,11 @@ public class MainClass {
 		for(String answerWord : answerWords){
 			if(!question.toLowerCase().contains(answerWord.toLowerCase())){
 				found = true;
-				result = result + answerWord;
+				result = result + " "  + answerWord + " ";
 			}
 		}
 		if(found){
-			return result;			
+			return result.trim();			
 		}else{
 			return null;
 		}
@@ -232,7 +232,7 @@ public class MainClass {
 	{
 		 System.out.println(qno+"in the process method");
 		 ArrayList<gramResult> gramResultList=new ArrayList<gramResult>();
-		 Path filepath = Paths.get("dev_ngrams/Ngrams_"+qno);
+		 Path filepath = Paths.get("dev_ngrams_keywordOverlap/Ngrams_"+qno);
 	     BufferedReader reader = new BufferedReader(new FileReader(filepath.toString()));
 	     String line1 = null;
 	     int numberLines=0;
@@ -296,7 +296,7 @@ public class MainClass {
 		       StringBuilder sbPhrase=new StringBuilder();
 		       for(String wordTag:wordsTags)
 		       {
-		      	 if(wordTag.contains("_NN"))
+		      	 if(wordTag.contains("_NNP"))
 		      	 {
 		      		 String[] separatedWord=wordTag.split("_");
 		      		 sbPhrase.append(separatedWord[0]).append(" "); 
