@@ -52,12 +52,12 @@ public class MainClass {
 	     tagger = new MaxentTagger("english-left3words-distsim.tagger");
 	     
 		/* -------main flow starts here ------------ */
-	     Path resultFilePath = Paths.get("Answers.txt");
+	     Path resultFilePath = Paths.get("Answers_Test.txt");
 	     BufferedWriter writer=new BufferedWriter(new FileWriter(resultFilePath.toString()));
 	     
 	     
 	     
-		 Path filepath = Paths.get("/home/meghana/Documents/NLP_PA2/pa2_data/pa2-release/qadata/dev/questions.txt");
+		 Path filepath = Paths.get("/home/trupti/Desktop/pa2-release/qadata/test/questions.txt");
 	     BufferedReader quereader = new BufferedReader(new FileReader(filepath.toString()));
 	     String line = null;
 	     boolean flag=false;
@@ -87,7 +87,8 @@ public class MainClass {
 	    		 ArrayList<gramResult> resultList=new ArrayList<gramResult>();
 	    		 resultList=processQuestions(qno);
 	    		 
-	    		 String answerType=Answertype.findAnswerType(question);
+	    		 String taggedquestion = tagger.tagString(question);
+	    		 String answerType=Answertype.findAnswerType(question,taggedquestion);
 	    		 
 	    		 	if(Pattern.compile("(DATE|LOCATION|PERSON|TIME|ORGANIZATION|TIME|MONEY)",Pattern.CASE_INSENSITIVE).matcher(answerType).find())
 	    			{
@@ -164,6 +165,34 @@ public class MainClass {
 	    				}
 	    					
 	    			}
+	    			else if(Pattern.compile("(PROPERNOUN)",Pattern.CASE_INSENSITIVE).matcher(answerType).find())
+	    			{
+	    				//just taking top 10 noun phrases for now 
+	    				System.out.println("proper noun phrase found");
+	    				int countAns=0;
+	    				boolean doneFlag=false;
+	    				for(gramResult rl:resultList)
+	    				{
+	    					ArrayList<String> arrp=new ArrayList<String>(rl.properNounPhraseList);
+	    					for(String pnounp:arrp)
+	    	 	 			{
+	    						
+	    						String filtered = filterAnswer(pnounp, question);
+	    	 	 				if(filtered != null && !(finalAnswerList.contains(filtered))){
+	    	 	 					countAns=countAns+1;
+	    	 	 					finalAnswerList.add(filtered);
+	    	 	 				}	    						
+	    	 	 				if(countAns>=numberAnswers)
+	    						{
+	    							doneFlag=true;
+	    							break;
+	    						}
+	    	 	 			}
+	    					if(doneFlag)
+    							break;	
+	    				}
+	    					
+	    			}
 	    			else if(Pattern.compile("(NUMBER)",Pattern.CASE_INSENSITIVE).matcher(answerType).find())
 	    			{
 	    				//might need to keep list of POS tags for date.
@@ -187,20 +216,7 @@ public class MainClass {
 	    		 	}
 
 	    		 
-	    	/*	 for(gramResult g:resultList)
-	 	 		{
-	 	 			Multimap<String, String> m=g.nerTagMap;
-	 	 			ArrayList<String> a=g.nounPhraseList;
-	 	 			System.out.println("---------------------------------new line-------------------------------------");
-	 	 			for(Entry<String, String> entry:m.entries())
-	 	 			{
-	 	 				System.out.println(entry.getKey()+" - "+entry.getValue());
-	 	 			}
-	 	 			for(String nounp:a)
-	 	 			{
-	 	 				System.out.println(nounp);
-	 	 			}
-	 	 		}*/
+	    	
 	    	 }
 	    	 // answer processing
 	    	 
@@ -220,6 +236,7 @@ public class MainClass {
 			if(!question.toLowerCase().contains(answerWord.toLowerCase())){
 				found = true;
 				result = result + " "  + answerWord + " ";
+				//result = result+answerWord;
 			}
 		}
 		if(found){
@@ -232,7 +249,7 @@ public class MainClass {
 	{
 		 System.out.println(qno+"in the process method");
 		 ArrayList<gramResult> gramResultList=new ArrayList<gramResult>();
-		 Path filepath = Paths.get("dev_ngrams_keywordOverlap/Ngrams_"+qno);
+		 Path filepath = Paths.get("d_ngrams_keywordOverlap/Ngrams_"+qno);
 	     BufferedReader reader = new BufferedReader(new FileReader(filepath.toString()));
 	     String line1 = null;
 	     int numberLines=0;
@@ -241,6 +258,7 @@ public class MainClass {
 			numberLines=numberLines+1;
 			Multimap<String, String> myMultimap = ArrayListMultimap.create();
 			ArrayList<String> myPhraseList = new ArrayList<String>();
+			ArrayList<String> myNounPhraseList = new ArrayList<String>();
 			 
 				Annotation document = new Annotation(line1);
 		        pipeline.annotate(document);
@@ -292,16 +310,33 @@ public class MainClass {
 		       /* -------POS -------*/
 		       String tagged = tagger.tagString(line1);
 		       boolean found=false;
+		       boolean properFound=false;
 		       String[] wordsTags=tagged.split(" ");
 		       StringBuilder sbPhrase=new StringBuilder();
+		       StringBuilder sbProperNoun=new StringBuilder();
+		       boolean firstwordJJ=false;
 		       for(String wordTag:wordsTags)
 		       {
-		      	 if(wordTag.contains("_NNP"))
-		      	 {
-		      		 String[] separatedWord=wordTag.split("_");
-		      		 sbPhrase.append(separatedWord[0]).append(" "); 
-		      		 found=true;
-		      	 }
+		      	 
+		    	   if(wordTag.contains("_JJ")&&firstwordJJ==false)
+		    	   { 
+			    		   firstwordJJ=true;
+			    		   String[] separatedWordJJ=wordTag.split("_");
+				      	   sbPhrase.append(separatedWordJJ[0]).append(" "); 
+		    	   }
+		    	   else if(wordTag.contains("_NN")&&firstwordJJ)
+			      {
+			      		 String[] separatedWord=wordTag.split("_");
+			      		 sbPhrase.append(separatedWord[0]).append(" "); 
+			      		 found=true;
+			      		 firstwordJJ=false;
+			       }
+		    	   else if(wordTag.contains("_NN"))
+		    	   {
+		    		   String[] separatedWordn=wordTag.split("_");
+			      		sbPhrase.append(separatedWordn[0]).append(" "); 
+			      		found=true;
+		    	   } 
 		      	 else
 		      	 {
 		      		 if(found)
@@ -310,10 +345,36 @@ public class MainClass {
 		      			myPhraseList.add(sbPhrase.toString()); 
 		      		 }
 		      		 found=false;
+		      		 firstwordJJ=false;
 		      		 sbPhrase.setLength(0);	 
+		      		 
+		      		 
+		      		if(wordTag.contains("_JJ")&&firstwordJJ==false)
+			    	{ 
+				    		   firstwordJJ=true;
+				    		   String[] separatedWordJJnew=wordTag.split("_");
+					      	   sbPhrase.append(separatedWordJJnew[0]).append(" "); 
+			    	}
+		      	 }
+		      	 if(wordTag.contains("_NNP"))
+		      	 {
+		      		 String[] separatedWordnoun=wordTag.split("_");
+		      		 sbProperNoun.append(separatedWordnoun[0]).append(" "); 
+		      		 properFound=true;
+		      		 
+		      	 }
+		      	 else
+		      	 {
+		      		 if(properFound)
+		      		 {
+		      			sbProperNoun.setLength(sbProperNoun.length()-1);
+		      			myNounPhraseList.add(sbProperNoun.toString()); 
+		      		 }
+		      		properFound=false;
+		      		sbProperNoun.setLength(0);
 		      	 }
 		       }
-		       gramResult gramResultObject=new gramResult(myMultimap,myPhraseList);
+		       gramResult gramResultObject=new gramResult(myMultimap,myPhraseList,myNounPhraseList);
 		       gramResultList.add(gramResultObject);
 		       
 		} //while each sentence
