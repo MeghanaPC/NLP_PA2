@@ -249,7 +249,7 @@ public class MainClass {
 	{
 		 System.out.println(qno+"in the process method");
 		 ArrayList<gramResult> gramResultList=new ArrayList<gramResult>();
-		 Path filepath = Paths.get("d_ngrams_keywordOverlap/Ngrams_"+qno);
+		 Path filepath = Paths.get("test_ngramskeywordOverlap/Ngrams_"+qno);
 	     BufferedReader reader = new BufferedReader(new FileReader(filepath.toString()));
 	     String line1 = null;
 	     int numberLines=0;

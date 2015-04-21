@@ -1,0 +1,830 @@
+qid 120
+1 New  England
+2 Montana
+3 Washington
+4 New  York
+5 Pacific  Coast
+6 Oregon
+7 California
+8 pay
+9 contract  interference
+10 violation
+qid 121
+1 Sadie  Frost
+2 Shopping
+3 Northern  California
+4 Miss  Rossellini
+5 Mary  Poppins
+6 St  Hospital
+7 Fullerton
+8 Farese
+9 Florida
+10 Memphis  Tenn
+qid 122
+1 Thursday
+2 Nov  8
+3 Wednesday
+4 Earlier  this  week
+5 Friday
+6 January
+7 1986  January
+8 weeks
+9 portions
+10 ban
+qid 123
+1 July  14
+2 Friday
+3 next  year  Friday
+4 terminal  July  14
+5 14
+6 1789
+7 today
+8 anything  other
+9 Parisians
+10 call  July
+qid 124
+1 US
+2 Canada
+3 Greater
+4 UK
+5 Govan
+6 Nevertheless
+7 Western  Europe
+8 destinations
+9 DIJON
+10 own  back
+qid 125
+1 Super  Super
+2 JVC
+3 Super
+4 Sonys
+5 Matsushita
+6 VCR
+7 Betacam
+8 Sony  Corp
+9 America
+10 Sony
+qid 126
+1 CFS
+2 Thursday  Fatigue
+3 Kroenke
+4 March
+5 Fatigue
+6 University
+7 Connecticut
+8 Holmes
+9 AIDS
+10 neurasthenia
+qid 127
+1 Chuck  Yeager
+2 Yeager
+3 Armstrong
+4 Aldrin
+5 Wright
+6 Chuck  Yeagers
+7 Segundo
+8 test  pilot  Chuck  Yeager
+9 Bell  X1
+10 lands
+qid 128
+1 RCA  Victor  Petie
+2 Nipper
+3 deaths
+4 Victor  Petie
+5 Petie
+6 Buster  Browns  Tige
+7 Gang
+8 Life
+9 Times
+10 term
+qid 129
+1 fifth
+2 size
+3 atom
+4 billionth
+5 billionths
+6 nanometers
+7 100millionths
+8 terms
+9 inch
+10 grain
+qid 130
+1 Boston
+2 Newton  Mass
+3 Vermont
+4 Massachusetts
+5 Cambridge
+6 Medford
+7 Chicago
+8 leave
+9 researcher  Much
+10 aging
+qid 131
+1 Sula
+2 Morrisons
+3 Dreaming  Emmett
+4 Lester
+5 Wood
+6 Ahrens
+7 Willson
+8 author
+9 Ms  Morrisons
+10 recognition  Morrisons
+qid 132
+1 Flemings
+2 Ian  Flemings
+3 Moore
+4 Associated  Press
+5 Timothy  Dalton
+6 Triumphs  Timothy  Dalton
+7 Brosnan
+8 Japan
+9 superspy
+10 novelist  Ian  Flemings
+qid 133
+1 US
+2 Africa
+3 Third  World
+4 Japan
+5 Europe
+6 China
+7 West  Africa
+8 bottom
+9 pressures  study
+10 Hispanic
+qid 134
+1 Apache
+2 Mescalero  Apache
+3 Mescalero  Lipan
+4 Mescalero
+5 Albuquerque
+6 El  Paso
+7 Inn
+8 Mountain
+9 Sangre
+10 Cristo  Blood
+qid 135
+1 1939
+2 Sept  1  1939
+3 January
+4 Friday
+5 1987
+6 50th  anniversary
+7 1945
+8 Pilsudski
+9 independence
+10 II
+qid 136
+1 Boston
+2 Vietnam
+3 Childrens
+4 Bethesda  Md
+5 Los  Angeles
+6 Charlestown
+7 Rochester  Minn
+8 other  location
+9 Institute
+10 Technology
+qid 137
+1 oxides
+2 need
+3 additives
+4 water
+5 nontoxic
+6 other  gases
+7 cyanuric  acid
+8 quickrelease  sources
+9 unit
+10 Chevron
+qid 138
+1 Bay
+2 Israel
+3 France
+4 Guadalcanal
+5 Far  East
+6 US
+7 Beirut
+8 occupation
+9 Arab  lands
+10 II
+qid 139
+1 Wankel
+2 Bernal
+3 Mollar
+4 Vento
+5 Ching
+6 Kip
+7 Yamanouchi
+8 speech
+9 regular
+10 Subaru
+qid 140
+1 John
+2 English  barons
+3 last  week
+4 Henry
+5 first  monarch
+6 Soviets
+7 Davis  proposal
+8 Englands  John
+9 signing
+10 England
+qid 141
+1 Charles  Dickens
+2 Dickens
+3 Jack  Bennys
+4 Sims
+5 Marley
+6 Ernest  Jackson
+7 Alistair  Sims
+8 name
+9 best  holiday  musicals
+10 Christmas
+qid 142
+1 American
+2 restaurant
+3 good  orders
+4 Co  US
+5 California
+6 local  rice
+7 liquor
+8 Japanese  restaurant
+9 Californiagrown  rice
+10 matter
+qid 143
+1 1934
+2 late  19th  Century
+3 1911
+4 1940
+5 July  8  1934
+6 1978
+7 1839
+8 Americas
+9 billionaire
+10 Sr
+qid 144
+1 1932
+2 1984
+3 1930s
+4 1931
+5 1959
+6 1937
+7 1884
+8 narration
+9 Sons
+10 Lovers
+qid 145
+1 London
+2 US
+3 Indianapolis
+4 UK
+5 Opren
+6 New  York
+7 America
+8 size
+9 workforce
+10 Co  Disclosure
+qid 146
+1 America
+2 India
+3 California
+4 Manouso
+5 United  States
+6 London
+7 Bay  Area
+8 hatha
+9 popular
+10 many  Americans
+qid 147
+1 Paul  Schraeder
+2 Blackhearts
+3 Patti
+4 Antha  Belle
+5 Williams
+6 Adkinson
+7 Mrs  Adkinson
+8 Jetts
+9 Runaways
+10 Myself
+qid 148
+qid 149
+1 joint  venture
+2 pounds
+3 Sales
+4 mill  products
+5 year  Mr  Gieg
+6 more
+7 military  aircraft
+8 growth
+9 military  demand
+10 new  uses
+qid 150
+1 Koplar
+2 Shirley
+3 Murphy
+4 Koplar  Koplar
+5 Sun
+6 Ornest
+7 Claudio  De  Oliveira
+8 KPLRTV  Channel
+9 KDNL
+10 PostDispatch
+qid 151
+1 Tony
+2 Joseph  Stewart
+3 Bran
+4 Corn
+5 Kelloggs
+6 Crispix
+7 MiniWheats  Biscuits
+8 Heartwise
+9 Benefit
+10 Dietz
+qid 152
+1 Prairie
+2 Flag  Day
+3 Figueroa
+4 House
+5 Katharine  Graham
+6 Diana
+7 Flag  Girls  Inc
+8 Friday
+9 Leona  Tennyson
+10 Tennyson
+qid 153
+1 Automotive
+2 Aftermarket
+3 Knibb  Gormezano
+4 Partners
+5 Opportunities
+6 North  American  Automotive
+7 SCI
+8 Digital
+9 Digital  Corp
+10 UK
+qid 154
+1 Huber
+2 David  Huber
+3 Ali  Baba
+4 Sinbad
+5 United  States  Congress
+6 Sailor
+7 Disney
+8 Cinderella
+9 Appeals
+10 Court
+qid 155
+1 Asturias
+2 Madrid
+3 Spain
+4 Algeria
+5 Catalonia
+6 Navarre
+7 France
+8 parts
+9 removal
+10 business
+qid 156
+1 Postal  Service
+2 Christmas
+3 Brentwood
+4 Los  Angeles
+5 Angeles
+6 Joseph  L  Johnson
+7 Concepcion
+8 Manhattan
+9 US  Postal  Service
+10 Ill
+qid 157
+1 May
+2 spring
+3 winter
+4 1992
+5 April  14
+6 March  31
+7 1418
+8 check  Time
+9 Holland  May
+10 Time
+qid 158
+1 Monday
+2 1981
+3 1987
+4 Tuesday
+5 March
+6 1986
+7 1985
+8 Last  July
+9 father
+10 wife
+qid 159
+1 Lambert  Empress
+2 Pam  Lambert  Empress
+3 San  Jose
+4 James
+5 David  San  Jose
+6 Carol  San  Jose
+7 Jan
+8 coronation
+9 jeweltrimmed  lace  apron
+10 mid1700s
+qid 160
+1 Maryland  House
+2 GeorgiaPacific  Corp
+3 House
+4 April
+5 Congress
+6 Roberts
+7 University
+8 London
+9 Nagle
+10 Agriculture  Committee
+qid 161
+1 PhiladelphiaNew  Jersey
+2 Lawrenceville
+3 Jersey
+4 New  Jersey  Casey
+5 Mission  Road
+6 Notre  Dame
+7 Coalinga
+8 PhiladelphiaNew  Jersey  area
+9 Princeton
+10 Jersey  area
+qid 162
+qid 163
+1 International
+2 Las  Vegas
+3 Vegas
+4 US
+5 Los  Angeles  International
+6 Kansas  City  International
+7 Huges  Center
+8 plane
+9 gas
+10 trees
+qid 164
+qid 165
+qid 166
+1 Rochester
+2 Massachusetts
+3 West  Colorado  Street
+4 United  States
+5 Colorado  Street
+6 Cuba
+7 Kaska
+8 years
+9 staterun  Program
+10 Ohios  staterun  Program
+qid 167
+1 Thai
+2 Vietnam
+3 US
+4 US  Air  Force
+5 Americans
+6 Honolulu
+7 Air  Force
+8 Laos  Vietnam
+9 National  Steering  Committee
+10 Bangkok
+qid 168
+qid 169
+1 bird  seed
+2 goslings
+3 seed
+4 Whisman
+5 place
+6 tongueincheek  bill
+7 front
+8 neighbors
+9 Father  Goose
+10 lot
+qid 170
+1 Texas
+2 San  Diego
+3 Texas  Ohio
+4 California  Texas
+5 Ohio
+6 California
+7 Central
+8 parks
+9 sale
+10 marine  parks
+qid 171
+1 Ethiopia
+2 Mississippis  Tunica  County
+3 Americas  Ethiopia
+4 Tunica  County
+5 Southern
+6 Carolina
+7 Missouri
+8 poverty  level
+9 neck
+10 Mullins
+qid 172
+1 1840
+2 1986
+3 May
+4 8
+5 Feb  29
+6 today
+7 30th  birthday
+8 site
+9 Queen  Victoria
+10 Albert
+qid 173
+1 Titanics
+2 Vicksburg
+3 May
+4 Senja
+5 Bismarck
+6 Stanley  Lord
+7 Lord
+8 Bush
+9 Quayle
+10 April
+qid 174
+1 RCA  Victor
+2 Petie
+3 Nipper
+4 Victor
+5 Buster  Browns
+6 Tige
+7 Life
+8 Times
+9 Bann
+10 Leonard  Maltin
+qid 175
+1 Illinois
+2 Connecticut
+3 Tennessee
+4 Wyoming
+5 Texas
+6 New  Hampshire
+7 New  Jersey  North  Carolina
+8 states
+9 country
+10 personal
+qid 176
+1 Central  Red  Army
+2 Chicago  Blackhawkstraded
+3 Alexander  Mogilny
+4 Canadiens
+5 Forum
+6 Montreal
+7 Friday
+8 Mogilny
+9 St  Louis  Blues
+10 West
+qid 177
+1 Peter  Boyle  Madeline  Marty  Feldman
+2 Richard  Pryor
+3 Pryor
+4 Crazy  CH2
+5 Partner
+6 May
+7 May  GIFT
+8 May  American  Comedian  Discharged
+9 May  Pryor
+10 GILDA
+qid 178
+1 Wisconsin
+2 Street
+3 Jordan
+4 New  York
+5 California
+6 Chicago
+7 Idaho
+8 Inc
+9 states
+10 stores
+qid 179
+1 London
+2 Even
+3 The  Queen
+4 Savill  gardens
+5 Great  Park
+6 Buckingham  Palace
+7 Buckingham
+8 miles  west
+9 family
+10 Christmas
+qid 180
+1 Johannesburg
+2 Louis
+3 Witwatersand
+4 Africa
+5 South  Africa
+6 US
+7 Edendale  Hospital
+8 homicide  victim
+9 Democratic  Front  official
+10 people
+qid 181
+1 Chicago
+2 Saturday
+3 Maguire
+4 Samuel  J
+5 Jackson
+6 Kojan
+7 WLROFM
+8 WMAQAM
+9 North  County
+10 Tuesday
+qid 182
+1 Bostons  Airport
+2 Airport
+3 Boston
+4 Airport  They
+5 Airport  Massport
+6 Airport  Private
+7 Airport  Two
+8 Bostons  Airport  Officials
+9 plan
+10 Airport  Officials
+qid 183
+1 variety
+2 Chinese
+3 Pallida
+4 dislikes  lime
+5 soil
+6 hazels
+7 hazels  petals
+8 immediate  response
+9 lily
+10 valley
+qid 184
+1 Sanchez  Lozada
+2 Lozada
+3 Paz  Estenssoro
+4 Bolivias
+5 Jose  Sarney
+6 Victor  Paz  Estenssoro
+7 Sarney
+8 Monday
+9 next
+10 conference  Monday
+qid 185
+1 Boston
+2 Niles  Ohio
+3 United  States
+4 Providence
+5 France
+6 Baltimore
+7 Philadelphia
+8 books
+9 author
+10 Bostonian
+qid 186
+1 Houston
+2 Alabama
+3 Notre  Dame
+4 Florida  Citrus
+5 Orlando
+6 Florida
+7 Rose
+8 most
+9 time
+10 night
+qid 187
+1 Emmy
+2 New  Adventures
+3 Charren
+4 Jeopardy  Photo
+5 Photo
+6 AA  Milnes
+7 New
+8 ABC
+9 Bambi
+10 Childrens
+qid 188
+1 Stennis
+2 Friday
+3 ASRM
+4 Shuttle  Engines
+5 House
+6 Discoverys
+7 Morton  Thiokol  Inc
+8 Challenger
+9 postChallenger
+10 Superman
+qid 189
+1 San  Diego  Zoo
+2 California  Nevada
+3 Arizona
+4 Queen  Mary
+5 Nevada
+6 Manns  Chinese  Theatre
+7 Department
+8 Californias
+9 Disneyland  Universal  Studios
+10 Studios
+qid 190
+1 Crescent
+2 International
+3 Monday
+4 Iran  Crescent
+5 International  Committee
+6 Iraq
+7 Iran
+8 Paer  Stenbaeck
+9 Eduard  Shevardnadze
+10 Iran  Exchange
+qid 191
+1 Banshees
+2 Colour
+3 IceT
+4 Butthole  Surfers
+5 Colour  IceT
+6 Siouxsie
+7 IceT  Butthole  Surfers
+8 Cleveland
+9 Im
+10 Ministry
+qid 192
+1 Jamieson
+2 Fed
+3 Minneapolis
+4 Fire  Department
+5 Reasoner
+6 US  Army
+7 South
+8 Gillespie
+9 Johnson
+10 College
+qid 193
+1 century
+2 top
+3 Everest
+4 difference
+5 attraction
+6 North  Americas
+7 Sanitation
+8 20320foot
+9 summit
+10 worlds
+qid 194
+1 Day  Care  Center
+2 Morrison
+3 Life
+4 Times
+5 Bann
+6 Petie
+7 Leonard  Maltin
+8 Robert
+9 Buckwheat
+10 Kelly  Jr
+qid 195
+1 Garvey
+2 Capriccio
+3 Plymouth
+4 Charly
+5 Guerreros
+6 Karen  Smith
+7 Vanity  Fair
+8 Channel
+9 Mohr
+10 Bob  Mohr
+qid 196
+1 Phillips
+2 Willie
+3 Esther  Phillips
+4 Orchestra
+5 Benson
+6 George  Benson
+7 Rippingtons
+8 Town  Hall  McFerrin
+9 Dont  Worry
+10 McFerrin
+qid 197
+1 attack
+2 rights  groups  such
+3 conservancy
+4 something
+5 success
+6 choice
+7 Nature  The
+8 thats
+9 Paradise  Valley
+10 beasts
+qid 198
+1 Vasaris
+2 Artists
+3 Renaissance
+4 Cavallon  Pioneer
+5 Elemosinario
+6 George
+7 Pontormo
+8 Monarch
+9 Haarlem
+10 Maurice  Guillaud
+qid 199
+1 Mr  Kearns
+2 fibers  operation
+3 mature  business
+4 goal
+5 workers
+6 fibers  division
+7 lower  level  supervisors
+8 rankandfile  workers
+9 incentives
+10 economic  recession
