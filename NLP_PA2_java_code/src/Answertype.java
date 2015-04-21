@@ -13,7 +13,7 @@ public class Answertype {
 		{	
 			if(Pattern.compile("(year|date)",Pattern.CASE_INSENSITIVE).matcher(question).find())
 				return "DATE";
-			else if(Pattern.compile("(city|state|area|country|location|province|district|territoty|region|continent|place)",Pattern.CASE_INSENSITIVE).matcher(question).find())
+			else if(Pattern.compile("(city|state|area|country|location|province|district|territory|region|continent|place)",Pattern.CASE_INSENSITIVE).matcher(question).find())
 				return "LOCATION";
 			else if(Pattern.compile("name",Pattern.CASE_INSENSITIVE).matcher(question).find())
 				return "PROPERNOUN";
