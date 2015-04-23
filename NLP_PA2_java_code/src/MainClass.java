@@ -32,7 +32,7 @@ public class MainClass {
 	public static final int linesToRead=1900;
 	public static MaxentTagger tagger;
 	public static StanfordCoreNLP pipeline;
-	
+	private static final int finalNumberAnswers=10;	
 	private static final int numberAnswers=10;
 	private static final int countNER=7;
 	//private static final int countPhrase=0;     numberAnswers-countNER
@@ -52,12 +52,12 @@ public class MainClass {
 	     tagger = new MaxentTagger("english-left3words-distsim.tagger");
 	     
 		/* -------main flow starts here ------------ */
-	     Path resultFilePath = Paths.get("Answers_Test.txt");
+	     Path resultFilePath = Paths.get("Answers_Dev.txt");
 	     BufferedWriter writer=new BufferedWriter(new FileWriter(resultFilePath.toString()));
 	     
 	     
 	     
-		 Path filepath = Paths.get("/home/trupti/Desktop/pa2-release/qadata/test/questions.txt");
+		 Path filepath = Paths.get("/home/meghana/Documents/NLP_PA2/pa2_data/pa2-release/qadata/dev/questions.txt");
 	     BufferedReader quereader = new BufferedReader(new FileReader(filepath.toString()));
 	     String line = null;
 	     boolean flag=false;
@@ -94,20 +94,45 @@ public class MainClass {
 	    			{
 	    		 		//taking 7 NERS and 3 phrases. Else if no NERS found, then rest of them noun phrases.
 	    		 		//int countAns=0;
-	    				boolean doneNER=false;
+	    				//boolean doneNER=false;
+	    		 		
+	    		 		
+	    		 		
 	    				for(gramResult rl:resultList)
 	    				{
 	    					Multimap<String, String> map=ArrayListMultimap.create(rl.nerTagMap);	
 	    	 	 			
-	    	 	 		
+	    					if(qno.equals("170")){
+		    		 			Multimap<String, String> m=rl.nerTagMap;
+		    					ArrayList<String> a=rl.nounPhraseList;
+		    					ArrayList<String> p=rl.properNounPhraseList;
+
+		    					System.out.println("---------------------------------new line-------------------------------------");
+		    					for(Entry<String, String> entry:m.entries())
+		    					{
+		    						System.out.println(entry.getKey()+" - "+entry.getValue());
+		    					}
+		    					for(String nounp:a)
+		    					{
+		    						System.out.println(nounp);
+		    					}
+		    					System.out.println("Printing proper  nouns");
+		    					for(String nounp:p)
+		    					{
+		    						System.out.println(nounp);
+		    					}
+	    					}
+		    					
 	    	 	 			Collection<String> taggerWords=map.get(answerType);
 	    	 	 			for(String s:taggerWords)
 	    	 	 			{
+	    	 	 				/*
 	    	 	 				if(finalAnswerList.size()>=countNER)
 	    	 	 				{
 	    	 	 					doneNER=true;
 	    	 	 					break;
 	    	 	 				}
+	    	 	 				*/
 	    	 	 				String filtered = filterAnswer(s, question);
 	    	 	 				if(filtered != null && !(finalAnswerList.contains(filtered))){
 	    	 	 					finalAnswerList.add(filtered);
@@ -115,10 +140,11 @@ public class MainClass {
 	    	 	 			}
 
 	    				}
+	    				
 	    				int remaining=numberAnswers-finalAnswerList.size();
 	    				for(gramResult rl:resultList)
 	    				{
-	    					ArrayList<String> arr=new ArrayList<String>(rl.nounPhraseList);
+	    					ArrayList<String> arr=new ArrayList<String>(rl.properNounPhraseList);
 	    					for(String phrase:arr)
 	    					{
 	    						if(remaining>0)
@@ -134,6 +160,7 @@ public class MainClass {
 	    							break;
 	    					}
 	    				}
+	    				
 	    				
 	    		 		System.out.println("ner tag found");
 	    			}
@@ -197,12 +224,38 @@ public class MainClass {
 	    			{
 	    				//might need to keep list of POS tags for date.
 	    				 System.out.println("number found");
+	    				 int countAns=0;
+		    				boolean doneFlag=false;
+		    				for(gramResult rl:resultList)
+		    				{
+		    					ArrayList<String> arrNum=new ArrayList<String>(rl.numberList);
+		    					for(String num:arrNum)
+		    	 	 			{
+		    						
+		    						String filtered = filterAnswer(num, question);
+		    	 	 				if(filtered != null && !(finalAnswerList.contains(filtered))){
+		    	 	 					countAns=countAns+1;
+		    	 	 					finalAnswerList.add(filtered);
+		    	 	 				}	    						
+		    	 	 				if(countAns>=numberAnswers)
+		    						{
+		    							doneFlag=true;
+		    							break;
+		    						}
+		    	 	 			}
+		    					if(doneFlag)
+	    							break;	
+		    				}
 	    			}
 	    			else
 	    			{
 	    				System.out.println("none of the question types match...error");
 	    			}
 	    		 
+	    		 	
+	    		 	//finalAnswerList = NgramTiler.tileGrams(finalAnswerList);
+	    		 	
+	    		 	//Writing answers to answers file
 	    		 	writer.write("qid"+" "+qno);
 	    		 	writer.newLine();
 	    		 	for(int i=0;i<finalAnswerList.size();i++)
@@ -249,7 +302,7 @@ public class MainClass {
 	{
 		 System.out.println(qno+"in the process method");
 		 ArrayList<gramResult> gramResultList=new ArrayList<gramResult>();
-		 Path filepath = Paths.get("test_ngramskeywordOverlap/Ngrams_"+qno);
+		 Path filepath = Paths.get("dev_ngrams_keywordOverlap/Ngrams_"+qno);
 	     BufferedReader reader = new BufferedReader(new FileReader(filepath.toString()));
 	     String line1 = null;
 	     int numberLines=0;
@@ -259,7 +312,8 @@ public class MainClass {
 			Multimap<String, String> myMultimap = ArrayListMultimap.create();
 			ArrayList<String> myPhraseList = new ArrayList<String>();
 			ArrayList<String> myNounPhraseList = new ArrayList<String>();
-			 
+			ArrayList<String> myNumberList = new ArrayList<String>();
+ 
 				Annotation document = new Annotation(line1);
 		        pipeline.annotate(document);
 
@@ -314,9 +368,23 @@ public class MainClass {
 		       String[] wordsTags=tagged.split(" ");
 		       StringBuilder sbPhrase=new StringBuilder();
 		       StringBuilder sbProperNoun=new StringBuilder();
+		       StringBuilder number=new StringBuilder();
 		       boolean firstwordJJ=false;
+		       boolean continuingNumPhrase = false;
 		       for(String wordTag:wordsTags)
 		       {
+		    	   
+		    	   if(wordTag.contains("_CD")){
+		    		   continuingNumPhrase = true;
+		    		   String[] separatedNum=wordTag.split("_");
+		    		   //if(!isDate(separatedNum[0])){
+			      	   number.append(separatedNum[0]).append(" ");
+		    		   //}
+		    	   }
+		    	   else if(continuingNumPhrase){
+		    		   myNumberList.add(number.toString().trim());
+		    		   continuingNumPhrase = false;
+		    	   }
 		      	 
 		    	   if(wordTag.contains("_JJ")&&firstwordJJ==false)
 		    	   { 
@@ -329,14 +397,15 @@ public class MainClass {
 			      		 String[] separatedWord=wordTag.split("_");
 			      		 sbPhrase.append(separatedWord[0]).append(" "); 
 			      		 found=true;
-			      		 firstwordJJ=false;
-			       }
+			      		 firstwordJJ=true;
+			       }/*
 		    	   else if(wordTag.contains("_NN"))
 		    	   {
 		    		   String[] separatedWordn=wordTag.split("_");
 			      		sbPhrase.append(separatedWordn[0]).append(" "); 
 			      		found=true;
 		    	   } 
+		    	   */
 		      	 else
 		      	 {
 		      		 if(found)
@@ -374,7 +443,13 @@ public class MainClass {
 		      		sbProperNoun.setLength(0);
 		      	 }
 		       }
-		       gramResult gramResultObject=new gramResult(myMultimap,myPhraseList,myNounPhraseList);
+		       /*
+		       Collection<String> dates = myMultimap.get("DATE");
+		       for(String num : myNumberList){
+		    	   //Can check if the number is not contained in a date, but this may not always be valid
+		       }
+		       */
+		       gramResult gramResultObject=new gramResult(myMultimap,myPhraseList,myNounPhraseList,myNumberList);
 		       gramResultList.add(gramResultObject);
 		       
 		} //while each sentence
@@ -383,4 +458,10 @@ public class MainClass {
 		return gramResultList;
 		
 	}
+	/*
+	private static boolean isDate(String input) {
+		
+		Pattern date = Pattern.compile("[0-9]{2}[-/][0-9]{2}[-/][0-9]{2,4}");
+		input = date.matcher(input).replaceAll("<DATE>");
+	}*/
 }

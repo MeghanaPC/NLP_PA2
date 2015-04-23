@@ -92,7 +92,7 @@ public class NgramTiler {
 		
 		
 		
-		return null;
+		return ngrams;
 	}
 	
 

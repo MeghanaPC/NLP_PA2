@@ -7,19 +7,19 @@ public class gramResult {
 	  public ArrayList<String> nounPhraseList;
 	  public ArrayList<String> properNounPhraseList;
 	 // public ArrayList<String> dateList;
-	 // public ArrayList<String> numberList;
+	  public ArrayList<String> numberList;
 	 
 	  gramResult()
 	  {
 		  
 	  }
-	  gramResult(Multimap<String, String> myMultimap,ArrayList<String> phrasemap,ArrayList<String> nounphrasemap)
+	  gramResult(Multimap<String, String> myMultimap,ArrayList<String> phrasemap,ArrayList<String> nounphrasemap,ArrayList<String> mynumberList)
 	  {
 		  nerTagMap=myMultimap;
 		  nounPhraseList=phrasemap;
 		  properNounPhraseList=nounphrasemap;
 		 // dateList=mydateList;
-		 // numberList=mynumberList;
+		 numberList=mynumberList;
 		  
 	  }
 	 
