@@ -52,12 +52,12 @@ public class MainClass {
 	     tagger = new MaxentTagger("english-left3words-distsim.tagger");
 	     
 		/* -------main flow starts here ------------ */
-	     Path resultFilePath = Paths.get("Answers_Dev.txt");
+	     Path resultFilePath = Paths.get("Answers_Test.txt");
 	     BufferedWriter writer=new BufferedWriter(new FileWriter(resultFilePath.toString()));
 	     
 	     
 	     
-		 Path filepath = Paths.get("/home/meghana/Documents/NLP_PA2/pa2_data/pa2-release/qadata/dev/questions.txt");
+		 Path filepath = Paths.get("/home/meghana/Documents/NLP_PA2/pa2_data/pa2-release/qadata/test/questions.txt");
 	     BufferedReader quereader = new BufferedReader(new FileReader(filepath.toString()));
 	     String line = null;
 	     boolean flag=false;
@@ -302,7 +302,7 @@ public class MainClass {
 	{
 		 System.out.println(qno+"in the process method");
 		 ArrayList<gramResult> gramResultList=new ArrayList<gramResult>();
-		 Path filepath = Paths.get("dev_ngrams_keywordOverlap/Ngrams_"+qno);
+		 Path filepath = Paths.get("test_ngramskeywordOverlap/Ngrams_"+qno);
 	     BufferedReader reader = new BufferedReader(new FileReader(filepath.toString()));
 	     String line1 = null;
 	     int numberLines=0;
@@ -385,19 +385,20 @@ public class MainClass {
 		    		   myNumberList.add(number.toString().trim());
 		    		   continuingNumPhrase = false;
 		    	   }
-		      	 
+		      	 /*
 		    	   if(wordTag.contains("_JJ")&&firstwordJJ==false)
 		    	   { 
 			    		   firstwordJJ=true;
 			    		   String[] separatedWordJJ=wordTag.split("_");
 				      	   sbPhrase.append(separatedWordJJ[0]).append(" "); 
 		    	   }
-		    	   else if(wordTag.contains("_NN")&&firstwordJJ)
+		    	   */
+		    	   if(wordTag.contains("_NN"))
 			      {
 			      		 String[] separatedWord=wordTag.split("_");
 			      		 sbPhrase.append(separatedWord[0]).append(" "); 
 			      		 found=true;
-			      		 firstwordJJ=true;
+			      		 //firstwordJJ=true;
 			       }/*
 		    	   else if(wordTag.contains("_NN"))
 		    	   {
@@ -417,13 +418,13 @@ public class MainClass {
 		      		 firstwordJJ=false;
 		      		 sbPhrase.setLength(0);	 
 		      		 
-		      		 
+		      		/* 
 		      		if(wordTag.contains("_JJ")&&firstwordJJ==false)
 			    	{ 
 				    		   firstwordJJ=true;
 				    		   String[] separatedWordJJnew=wordTag.split("_");
 					      	   sbPhrase.append(separatedWordJJnew[0]).append(" "); 
-			    	}
+			    	}*/
 		      	 }
 		      	 if(wordTag.contains("_NNP"))
 		      	 {
