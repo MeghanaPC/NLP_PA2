@@ -8,7 +8,7 @@ public class gramResult {
 	  public ArrayList<String> properNounPhraseList;
 	 // public ArrayList<String> dateList;
 	  public ArrayList<String> numberList;
-	 
+	  
 	  gramResult()
 	  {
 		  
